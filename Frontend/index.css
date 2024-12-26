@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Properties */
+:root {
+  --primary: #3B82F6;
+  --primary-hover: #2563EB;
+  --error: #EF4444;
+  --success: #10B981;
+  --warning: #F59E0B;
+}
+
+/* Base Styles */
+body {
+  @apply antialiased text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-900;
+}
+
+/* Transitions */
+.theme-transition {
+  @apply transition-colors duration-200;
+}
+
+/* Chart Customization */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  @apply stroke-gray-200 dark:stroke-gray-700;
+}
+
+.recharts-tooltip-wrapper {
+  @apply !shadow-lg;
+}
+
+/* Custom Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 2s linear infinite;
+}
+
+/* Loading States */
+.loading-indicator {
+  @apply animate-spin rounded-full border-2 border-gray-200 dark:border-gray-700;
+  border-top-color: var(--primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Focus States */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700;
+}
+
+/* Button Base */
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200
+         focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-hover
+         focus:ring-primary dark:focus:ring-offset-gray-900;
+}
+
+/* Input Styles */
+.input {
+  @apply w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600
+         bg-white dark:bg-gray-700 text-gray-900 dark:text-white
+         focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
+         dark:focus:ring-offset-gray-900 transition-colors duration-200;
+}
+
+/* Navigation Styles */
+.nav-link-active {
+  @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white;
+}
+
+.nav-link {
+  @apply text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800
+         hover:text-gray-900 dark:hover:text-white transition-colors duration-200;
+}
+
+/* Stock Chart Container */
+.stock-chart-container {
+  @apply h-[400px] w-full overflow-hidden;
+}
+
+/* Toast Customization */
+.toast {
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white
+         shadow-lg rounded-lg border border-gray-200 dark:border-gray-700;
+}
+
+/* Responsive Utilities */
+@media (max-width: 640px) {
+  .stock-chart-container {
+    @apply h-[300px];
+  }
+}
