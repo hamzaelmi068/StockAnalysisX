@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeToggle } from '../components/themetoggle';
+import { ThemeToggle } from './themetoggle';
 import { Link, useLocation } from 'react-router-dom';
 import { LayoutDashboard, History, Brain, Briefcase, BarChart2, LineChart } from 'lucide-react';
 

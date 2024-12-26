@@ -5,10 +5,9 @@ import { useStore } from "../utils/store";
 import { Toaster } from "sonner";
 
 // Import pages
-import Dashboard from "../components/Dashboard";
-import Historical from "../Pages/Historical";
-
-import AIInsights from "../components/AIInsights";
+import { Dashboard } from "../components/Dashboard";
+import Historical from "./Historical";
+import AIInsights from "./AIInsights";
 import Portfolio from "./Portfolio";
 import MarketAnalysis from "./MarketAnalysis";
 import Analytics from "./Analytics";

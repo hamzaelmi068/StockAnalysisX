@@ -1,8 +1,9 @@
 import React from 'react';
-import { SearchBar } from './SearchBar';
+import { SearchBar } from './searchBar';
 import { StockChart } from './StockChart';
 import { AIAnalysis } from './AIAnalysis';
 import { useStore } from '../utils/store';
+import { Logo } from './Logo';
 
 export function Dashboard() {
   const { selectedStock } = useStore();
@@ -31,6 +32,7 @@ export function Dashboard() {
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
             Welcome to Stock Analyzer
           </h2>
+          <Logo />
           <p className="text-gray-600 dark:text-gray-400">
             Enter a stock symbol above to get started
           </p>

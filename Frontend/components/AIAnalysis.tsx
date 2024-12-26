@@ -87,3 +87,4 @@ export function AIAnalysis({ symbol }: AIAnalysisProps) {
       </div>
     </div>
   );
+}
